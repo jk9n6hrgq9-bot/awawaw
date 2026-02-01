@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f7ff, #fce4ec);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 22px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#yes {
+    background: #ff6f91;
+    color: white;
+}
+
+#no {
+    background: #ddd;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="card">
+    <img src="Confused Thinking GIF by Pudgy Memez.gif">
+    <h1>Andreea, will you be my valentine?</h1>
+
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+</div>
+
+<script>
+const noBtn = document.getElementById("no");
+
+noBtn.addEventListener("mouseover", () => {
+    noBtn.style.position = "absolute";
+    noBtn.style.left = Math.random() * 70 + "vw";
+    noBtn.style.top = Math.random() * 70 + "vh";
+});
+
+document.getElementById("yes").onclick = () => {
+    document.getElementById("card").innerHTML = `
+        <img src="Excited Lets Go GIF by Pudgy Penguins.gif">
+        <h1>I knew you'd say yes 💖</h1>
+        <p>Dinner. Just us.<br>February 14th.</p>
+    `;
+};
+</script>
+
+</body>
+</html>
